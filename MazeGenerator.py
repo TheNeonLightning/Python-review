@@ -276,11 +276,9 @@ else:
         for line in file:
             width = len(line) - 3
             break
-        file.close()  # уточнить насчёт необходимости
     with open(string, 'r') as file:
         for line in file:
             height += 1
-        file.close()  # уточнить насчёт необходимости
     height = int((height - 1) / 2)
     with open(string, 'r') as file:
         index = 0
@@ -298,7 +296,6 @@ else:
                                                                                                                        / 4)
                                         + int(i / 4) + int(width / 4)))
             index += 1
-        file.close()  # уточнить насчёт необходимости
     width = int(width / 4)
     print("Считанный лабириант:")
     maze = maze_builder(height, width, walls_h, walls_v)
